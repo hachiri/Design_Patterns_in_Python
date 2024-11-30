@@ -9,6 +9,8 @@ class Point:
     def __str__(self):
         return f'(x, y): ({self.x}, {self.y})'
 
+
+class PointFactory:
     @staticmethod
     def new_cartesian_point(x, y):
         return Point(x, y)
@@ -19,7 +21,7 @@ class Point:
 
 
 if __name__ == '__main__':
-    p1 = Point(2, 3)
-    p2 = Point.new_polar_point(2, 3)
+    p1 = PointFactory.new_cartesian_point(2, 3)
+    p2 = PointFactory.new_polar_point(2, 3)
     print(p1)
     print(p2)
